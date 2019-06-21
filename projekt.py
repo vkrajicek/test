@@ -37,7 +37,7 @@ for i in range(3):
     user = selected_user
     break
 
-
+# toto je bozi
 
 
 if log_user==None:
