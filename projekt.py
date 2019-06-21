@@ -40,8 +40,6 @@ for i in range(3):
 
 
 
-
-
 if log_user==None:
     exit(0)
 

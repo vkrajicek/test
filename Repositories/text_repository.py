@@ -64,3 +64,4 @@ class Text_repository:
     #     self.connection.commit()
 
 
+# ss

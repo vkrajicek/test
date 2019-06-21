@@ -12,3 +12,4 @@ class User:
         return self.login + ' ' + str(self.id) + ' ' + self.name + ' ' + self.surename + ' ' + self.password + ' ' +  self.lastlogin.__str__() + ' ' + self.lastlogintime.__str__()
 
 
+# ss
