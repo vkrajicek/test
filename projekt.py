@@ -1,7 +1,6 @@
 import psycopg2
 
-from Classes.text import Text
-from Classes.user import User
+
 from Repositories.text_repository import Text_repository
 from Repositories.user_repository import User_repository
 
@@ -37,9 +36,6 @@ for i in range(3):
     user = selected_user
     break
 
-# toto je bozi
-
-
 if log_user==None:
     exit(0)
 
@@ -56,21 +52,21 @@ for i in range(4):
         if result_user_change == 'no':
             break
         if result_user_change == 'yes':
-            result_user_del = input('Do you want to delete an user? type yes or no:')
+            result_user_del = input('Do you want to delete an user? type yes or no: ')
 
             if result_user_del == 'yes':
                 result_user_delete = input('Type login of the user you want to delete: ')
                 user_repository.user_delete(result_user_delete)
 
-            result_user_in = input('Do you want to add an user? type yes or no:')
+            result_user_in = input('Do you want to add an user? type yes or no: ')
             if result_user_in == 'no':
                 break
             if result_user_in == 'yes':
-                result_user_add_id = input('Type id of the user you want to add')
-                result_user_add_name = input('Type name of the user you want to add')
-                result_user_add_surename = input('Type surename of the user you want to add')
-                result_user_add_login = input('Type login of the user you want to add')
-                result_user_add_password = input('Type password of the user you want to add')
+                result_user_add_id = input('Type id of the user you want to add: ')
+                result_user_add_name = input('Type name of the user you want to add: ')
+                result_user_add_surename = input('Type surename of the user you want to add: ')
+                result_user_add_login = input('Type login of the user you want to add: ')
+                result_user_add_password = input('Type password of the user you want to add: ')
 
                 user_repository.add_new_user(result_user_add_id, result_user_add_name, result_user_add_surename, result_user_add_login, result_user_add_password)
 
@@ -85,12 +81,12 @@ for key, value in selected_texts_dictionary.items():
     print(value + ' on position ' + str(key))
 
 for i in range(1, 4):
-    print('If you want to change your texts press 1 ')
+    print('If you want to change your texts press 1')
     print('if you want to continue, press 2')
     press = input('Please type a number: ')
 
     if press == '1':
-        result_position = input(' Press the number of position of the text you want to change')
+        result_position = input(' Press the number of position of the text you want to change: ')
         dict_value = ''
         dict_key = 0
         for key, value in selected_texts_dictionary.items():
@@ -119,7 +115,7 @@ for i in range(4):
     else:
         print('You press wrong command and you have only ' + ' ' + str(int(3 - i)) + ' ' + ' attempts')
 
-print('Thank you ' + selected_user.name + ' ' + 'for using bitch_maker 9000')
+print('Thank you ' + selected_user.name + ' ' + 'for using text_maker 9000')
 print('Have a nice day')
 
 cursor.close()
