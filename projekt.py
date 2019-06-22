@@ -1,8 +1,9 @@
 import psycopg2
 
 
-from Repositories.text_repository import Text_repository
+from Repositories.book_repository import Book_repository
 from Repositories.user_repository import User_repository
+from Repositories.chapter_repository import Chapter_repository
 
 connection = psycopg2.connect(user="postgres",
                               password="Aquapark4",
@@ -14,8 +15,8 @@ cursor = connection.cursor()
 user_repository = User_repository(connection)
 user_list = user_repository.get_all()
 
-text_repository = Text_repository(connection)
-rows_count_2 = text_repository.rows_count()
+text_repository = Book_repository(connection)
+rows_count_book = text_repository.rows_count_book()
 
 print('Welcome to the text database')
 
@@ -39,7 +40,7 @@ for i in range(3):
 if log_user==None:
     exit(0)
 
-selected_texts = text_repository.id_veta_selected(selected_user.id)
+selected_texts = text_repository.id_book_selected(selected_user.id)
 
 selected_texts_dictionary = {}
 for vet in selected_texts:
@@ -70,9 +71,9 @@ for i in range(4):
 
                 user_repository.add_new_user(result_user_add_id, result_user_add_name, result_user_add_surename, result_user_add_login, result_user_add_password)
 
-                result_new_text_for_new_user = input('Type new text for the new user here: ')
+                result_new_book_for_new_user = input('Type new text for the new user here: ')
 
-                text_repository.add_new_text(rows_count_2, result_user_add_id, result_new_text_for_new_user)
+                text_repository.add_new_book(rows_count_book, result_user_add_id, result_new_book_for_new_user)
 
                 break
 
@@ -108,7 +109,7 @@ for i in range(4):
     press = input('Please type yes or no: ')
     if press == 'yes':
         result_new_text = input('Type your new text here: ')
-        text_repository.add_new_text(rows_count_2, selected_user.id, result_new_text)
+        text_repository.add_new_book(rows_count_book, selected_user.id, result_new_text)
         break
     if press == 'no':
         break
