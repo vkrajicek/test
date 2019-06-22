@@ -40,8 +40,14 @@ class Chapter_repository:
         self.cursor.execute(postgres_book_chapter_delete_query)
         self.connection.commit()
 
-    # def add_new_chapter(self, rows_count_chapter_2, result_new_chapter):
-    #     postgres_insert_query_new_chapter = "INSERT INTO projekt.chapter (id, chapter_name) VALUES (%s, %s)"
-    #     record_to_insert_new_chapter = (int(rows_count_chapter_2[0]) + 1, result_new_chapter)
-    #     self.cursor.execute(postgres_insert_query_new_chapter, record_to_insert_new_chapter)
-    #     self.connection.commit()
+    def add_new_chapter(self, book_id, new_chapter):
+        count = self.rows_count_chapter()
+        postgres_insert_query_new_chapter = "INSERT INTO projekt.chapter (id, chapter_name, edited_date) VALUES (%d, %s, now())"
+        record_to_insert_new_chapter = (count[0] + 1, new_chapter)
+        self.cursor.execute(postgres_insert_query_new_chapter, record_to_insert_new_chapter)
+        self.cursor.execute("SELECT count(*) from projekt.book_chapter")
+        book_chapters_id_count = self.cursor.fetchone()
+        postgres_insert_query_new_chapter_in_book_chapter = "INSERT INTO projekt.book_chapter (id, book_id, edited_date, chapter_id) VALUES (%d, %d, now(), %d)"
+        record_to_insert_new_chapter_in_book_chapter = (count[0] + 1, book_id, book_chapters_id_count)
+        self.cursor.execute(postgres_insert_query_new_chapter_in_book_chapter, record_to_insert_new_chapter_in_book_chapter)
+        self.connection.commit()
