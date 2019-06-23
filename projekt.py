@@ -1,7 +1,10 @@
 import psycopg2
 
+from Classes.subject import Subject
+from Classes.user import User
 
 from Repositories.book_repository import Book_repository
+from Repositories.subject_repository import Subject_repository
 from Repositories.user_repository import User_repository
 from Repositories.chapter_repository import Chapter_repository
 
@@ -15,10 +18,12 @@ cursor = connection.cursor()
 user_repository = User_repository(connection)
 user_list = user_repository.get_all()
 
-text_repository = Book_repository(connection)
-rows_count_book = text_repository.rows_count_book()
+book_repository = Book_repository(connection)
+chapter_repository = Chapter_repository(connection)
+subject_repository = Subject_repository(connection)
 
-print('Welcome to the text database')
+
+print('Welcome to the database')
 
 print('Please, write your login and then password')
 
@@ -40,11 +45,12 @@ for i in range(3):
 if log_user==None:
     exit(0)
 
-selected_texts = text_repository.id_book_selected(selected_user.id)
 
-selected_texts_dictionary = {}
-for vet in selected_texts:
-    selected_texts_dictionary.update({vet[0]: vet[1]})
+# selected_texts = book_repository.id_book_selected(selected_user.id)
+
+# selected_texts_dictionary = {}
+# for vet in selected_texts:
+#     selected_texts_dictionary.update({vet[0]: vet[1]})
 
 for i in range(4):
     if selected_user.login == 'Vito':
@@ -56,65 +62,77 @@ for i in range(4):
             result_user_del = input('Do you want to delete an user? type yes or no: ')
 
             if result_user_del == 'yes':
-                result_user_delete = input('Type login of the user you want to delete: ')
+                result_user_delete = input('Type id of the user you want to delete: ')
                 user_repository.user_delete(result_user_delete)
 
             result_user_in = input('Do you want to add an user? type yes or no: ')
             if result_user_in == 'no':
                 break
             if result_user_in == 'yes':
-                result_user_add_id = input('Type id of the user you want to add: ')
-                result_user_add_name = input('Type name of the user you want to add: ')
-                result_user_add_surename = input('Type surename of the user you want to add: ')
-                result_user_add_login = input('Type login of the user you want to add: ')
-                result_user_add_password = input('Type password of the user you want to add: ')
+                user = User()
+                user.id = input('Type id of the user you want to add: ')
+                user.name =input('Type name of the user you want to add: ')
+                user.surename =input('Type surename of the user you want to add: ')
+                user.login =input('Type login of the user you want to add: ')
+                user.password =input('Type password of the user you want to add: ')
+                user_repository.add_new_user(user)
 
-                user_repository.add_new_user(result_user_add_id, result_user_add_name, result_user_add_surename, result_user_add_login, result_user_add_password)
+                result_new_book_for_new_user = input('Type new book for the new user here: ')
+                result_new_author_for_new_book = input('Type author for the book: ')
 
-                result_new_book_for_new_user = input('Type new text for the new user here: ')
-
-                text_repository.add_new_book(rows_count_book, result_user_add_id, result_new_book_for_new_user)
+                book_repository.add_new_book(user.id, result_new_book_for_new_user, result_new_author_for_new_book)
 
                 break
 
-print('Here are your texts: ')
-for key, value in selected_texts_dictionary.items():
-    print(value + ' on position ' + str(key))
+books=book_repository.get_all_by_user_id(log_user.id)
+print('Here is your book: ')
+print(books[0].name_of_the_book)
 
-for i in range(1, 4):
-    print('If you want to change your texts press 1')
-    print('if you want to continue, press 2')
-    press = input('Please type a number: ')
+# subject=Subject()
+# subject.id=5
+# subject.subject='Matika'
+# subject.teacher='pancelka'
+# subject.method_of_course_completion='Final exam'
+# subject_repository.add_new_subject(subject, selected_user.id)
 
-    if press == '1':
-        result_position = input(' Press the number of position of the text you want to change: ')
-        dict_value = ''
-        dict_key = 0
-        for key, value in selected_texts_dictionary.items():
-            if key == int(result_position):
-                dict_value += value
-                dict_key += key
-        result_change_text = input('Change your text from -' + ' ' + str(dict_value) + ' ' + '-to: ')
 
-        text_repository.update(result_change_text, dict_key)
-        break
 
-    if press == '2':
-        break
-    else:
-        print('You press wrong command and you have only ' + ' ' + str(int(3 - i)) + ' ' + ' attempts')
 
-for i in range(4):
-    print('Do you want to add another text to you? ')
-    press = input('Please type yes or no: ')
-    if press == 'yes':
-        result_new_text = input('Type your new text here: ')
-        text_repository.add_new_book(rows_count_book, selected_user.id, result_new_text)
-        break
-    if press == 'no':
-        break
-    else:
-        print('You press wrong command and you have only ' + ' ' + str(int(3 - i)) + ' ' + ' attempts')
+#
+# for i in range(1, 4):
+#     print('If you want to change your texts press 1')
+#     print('if you want to continue, press 2')
+#     press = input('Please type a number: ')
+#
+#     if press == '1':
+#         result_position = input(' Press the number of position of the text you want to change: ')
+#         dict_value = ''
+#         dict_key = 0
+#         for key, value in selected_texts_dictionary.items():
+#             if key == int(result_position):
+#                 dict_value += value
+#                 dict_key += key
+#         result_change_text = input('Change your text from -' + ' ' + str(dict_value) + ' ' + '-to: ')
+#
+#         book_repository.update(result_change_text, dict_key)
+#         break
+#
+#     if press == '2':
+#         break
+#     else:
+#         print('You press wrong command and you have only ' + ' ' + str(int(3 - i)) + ' ' + ' attempts')
+#
+# for i in range(4):
+#     print('Do you want to add another text to you? ')
+#     press = input('Please type yes or no: ')
+#     if press == 'yes':
+#         result_new_text = input('Type your new text here: ')
+#         book_repository.add_new_book(rows_count_book, selected_user.id, result_new_text)
+#         break
+#     if press == 'no':
+#         break
+#     else:
+#         print('You press wrong command and you have only ' + ' ' + str(int(3 - i)) + ' ' + ' attempts')
 
 print('Thank you ' + selected_user.name + ' ' + 'for using text_maker 9000')
 print('Have a nice day')

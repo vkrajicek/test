@@ -61,18 +61,18 @@ class Book_repository:
         rows_count_book_2 = rows_count_book_1[0]
         return rows_count_book_2
 
-    def add_new_book(self, book, user_id):
+    def add_new_book(self, user_id, book, author):
         count=self.rows_count_book()
         postgres_insert_query_new_book = "INSERT INTO projekt.book (id,user_id, name_of_the_book, author) VALUES (%d, %d, %s, %s)"
-        record_to_insert_new_book = (count[0] + 1, user_id, book.name_of_the_book, book.author)
+        record_to_insert_new_book = (int(count[0]) + 1, int(user_id), book.name_of_the_book, author)
         self.cursor.execute(postgres_insert_query_new_book, record_to_insert_new_book)
-        chapter_repository=Chapter_repository(self.connection)
         self.connection.commit()
+        chapter_repository = Chapter_repository(self.connection)
         chaper_ids_list=[]
         for i in book.chapters:
             chapter_id=chapter_repository.rows_count_chapter()
             postgres_insert_query_new_chapter = "INSERT INTO projekt.chapter (id, chapter_name, edited_date) VALUES (%d, %s, now()"
-            record_to_insert_new_chapter = (chapter_id + 1, i.chapter_name)
+            record_to_insert_new_chapter = (int(chapter_id) + 1, i.chapter_name)
             self.cursor.execute(postgres_insert_query_new_chapter, record_to_insert_new_chapter)
             self.connection.commit()
             chaper_ids_list.append(chapter_id + 1)

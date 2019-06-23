@@ -7,7 +7,7 @@ class User_repository:
         self.cursor = connection.cursor()
 
     def get_all(self):
-        self.cursor.execute("SELECT * from projekt.projekt_user ;")
+        self.cursor.execute("SELECT * from projekt.user ;")
         records_user = self.cursor.fetchall()
         user_list = []
         for user in records_user:
@@ -23,7 +23,7 @@ class User_repository:
         return user_list
 
     def get_one_by_id(self, id):
-        self.cursor.execute("SELECT * from projekt.projekt_user where id=%d ;" % id)
+        self.cursor.execute("SELECT * from projekt.user where id=%d ;" % id)
         records_user = self.cursor.fetchone()
         now_user = User()
         now_user.id = records_user[0]
@@ -38,12 +38,12 @@ class User_repository:
     def update(self, user):
         if user.id != None:
             self.cursor.execute(
-                "UPDATE projekt.projekt_user set name=%s, surename=%s, login =%s, password=%s, where id=%d ;" % user.name,
+                "UPDATE projekt.user set name=%s, surename=%s, login =%s, password=%s, where id=%d ;" % user.name,
                 user.surename, user.login, user.password)
             self.connection.commit()
 
     def user_select(self, login_result, pass_result):
-        user_select_query= "SELECT * from projekt.projekt_user where login=%s and password=%s"
+        user_select_query= "SELECT * from projekt.user where login=%s and password=%s"
         parameters=(str(login_result), str(pass_result))
         self.cursor.execute(user_select_query,parameters )
         selected_user = self.cursor.fetchone()
@@ -60,17 +60,14 @@ class User_repository:
         else:
             return None
 
-    def user_delete(self, result_user_delete):
-        if result_user_delete != None:
-            postgres_delete_query = "DELETE FROM projekt.projekt_user WHERE login = %s"
-            parameters=(str(result_user_delete))
-            self.cursor.execute(postgres_delete_query,parameters)
-            self.connection.commit()
+    def user_delete(self, user_id):
+        postgres_delete_query = "DELETE FROM projekt.user WHERE id = %s ;" % user_id
+        self.cursor.execute(postgres_delete_query)
+        self.connection.commit()
 
-    def add_new_user(self, result_user_add_id, result_user_add_name, result_user_add_surename, result_user_add_login, result_user_add_password):
-        postgres_add_query = " INSERT INTO projekt.projekt_user (id, name, surename, login, password) VALUES (%s,%s,%s,%s,%s)"
-        record_to_add = (int(result_user_add_id), str(result_user_add_name), str(result_user_add_surename),
-                         str(result_user_add_login), str(result_user_add_password))
+    def add_new_user(self, user):
+        postgres_add_query = " INSERT INTO projekt.user (id, name, surename, login, password) VALUES (%d,%s,%s,%s,%s)"
+        record_to_add = (user.id, user.name, user.surename, user.login, user.password)
         self.cursor.execute(postgres_add_query, record_to_add)
         self.connection.commit()
 

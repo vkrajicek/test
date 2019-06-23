@@ -31,7 +31,7 @@ class Chapter_repository:
         self.cursor.execute("SELECT count(*) from projekt.chapter ;")
         rows_count_chapter_1 = self.cursor.fetchall()
         rows_count_chapter_2 = rows_count_chapter_1[0]
-        return int(rows_count_chapter_2)
+        return rows_count_chapter_2
 
     def chapter_delete(self, chapter_id):
         postgres_delete_query = "DELETE FROM projekt.chapter WHERE id = %s ;" % chapter_id
