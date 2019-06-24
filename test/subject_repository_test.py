@@ -73,7 +73,7 @@ class Subject_repository_test(unittest.TestCase):
         result=self.subject_repository.get_one_by_id(3)
         self.assertEqual(result, None)
 
-    def test_add_new_subject_parameter_not_valid(self):
+    def test_add_new_subject_subject_parameter_not_valid(self):
         subject=Subject()
         subject.id = 3
         subject.subject = 'physical education'

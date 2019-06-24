@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1129d594-0ade-4a59-9857-a2cf11504f83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/subject_repository_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/user_repository_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/book_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/book_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/chapter_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/chapter_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/subject_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/subject_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/book_repository_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/book_repository_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/chapter_repository_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/chapter_repository_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/subject_repository_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/subject_repository_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +37,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/chapter_repository_test.py">
+        <entry file="file://$PROJECT_DIR$/test/subject_repository_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="660">
+              <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -52,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/subject_repository_test.py">
+        <entry file="file://$PROJECT_DIR$/test/user_repository_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-446">
-              <caret line="18" column="115" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
+            <state relative-caret-position="300">
+              <caret line="71" column="4" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="75" selection-end-column="42" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -64,10 +61,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Repositories/user_repository.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Repositories/subject_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+            <state relative-caret-position="289">
+              <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -75,20 +81,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Repositories/book_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="100" column="31" lean-forward="true" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+            <state relative-caret-position="664">
+              <caret line="130" column="108" selection-start-line="130" selection-start-column="88" selection-end-line="130" selection-end-column="108" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Repositories/chapter_repository.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
-              <caret line="61" selection-start-line="61" selection-end-line="62" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -134,6 +131,7 @@
       <find>chaper</find>
       <find>count</find>
       <find>count(</find>
+      <find>book.id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,7 +149,6 @@
         <option value="$PROJECT_DIR$/Classes/subject.py" />
         <option value="$PROJECT_DIR$/Repositories/text_repository.py" />
         <option value="$PROJECT_DIR$/Classes/book.py" />
-        <option value="$PROJECT_DIR$/Repositories/user_repository.py" />
         <option value="$PROJECT_DIR$/projekt.py" />
         <option value="$PROJECT_DIR$/database.sql" />
         <option value="$PROJECT_DIR$/Classes/chapter.py" />
@@ -161,6 +158,8 @@
         <option value="$PROJECT_DIR$/Repositories/book_repository.py" />
         <option value="$PROJECT_DIR$/Repositories/subject_repository.py" />
         <option value="$PROJECT_DIR$/test/subject_repository_test.py" />
+        <option value="$PROJECT_DIR$/test/user_repository_test.py" />
+        <option value="$PROJECT_DIR$/Repositories/user_repository.py" />
       </list>
     </option>
   </component>
@@ -227,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for subject_repository_test.Subject_repository_test">
+  <component name="RunManager" selected="Python tests.Unittests for user_repository_test.User_repository_test">
     <configuration name="Unittests for subject_repository_test.Subject_repository_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -242,7 +241,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_not_valid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for user_repository_test.User_repository_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -252,11 +251,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;subject_repository_test.Subject_repository_test.test_add_new_subject_not_valid&quot;" />
+      <option name="_new_target" value="&quot;user_repository_test.User_repository_test&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_parameter_not_valid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for user_repository_test.User_repository_test.test_subject_delete_none_parameter" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -266,11 +265,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;subject_repository_test.Subject_repository_test.test_add_new_subject_parameter_not_valid&quot;" />
+      <option name="_new_target" value="&quot;user_repository_test.User_repository_test.test_subject_delete_none_parameter&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_none_parameter" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -280,11 +279,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;subject_repository_test.Subject_repository_test.test_subject_delete_none_parameter&quot;" />
+      <option name="_new_target" value="&quot;user_repository_test.User_repository_test.test_user_delete_valid&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_valid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for user_repository_test.User_repository_test.test_user_select_valid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -294,24 +293,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;subject_repository_test.Subject_repository_test.test_subject_delete_valid&quot;" />
+      <option name="_new_target" value="&quot;user_repository_test.User_repository_test.test_user_select_valid&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_not_valid" />
-      <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_valid" />
       <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test" />
-      <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_none_parameter" />
-      <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_parameter_not_valid" />
+      <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test.test_user_delete_valid" />
+      <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test" />
+      <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test.test_user_select_valid" />
+      <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test.test_subject_delete_none_parameter" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test" />
+        <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test.test_subject_delete_none_parameter" />
+        <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test.test_user_select_valid" />
+        <item itemvalue="Python tests.Unittests for user_repository_test.User_repository_test.test_user_delete_valid" />
         <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test" />
-        <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_parameter_not_valid" />
-        <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_none_parameter" />
-        <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_valid" />
-        <item itemvalue="Python tests.Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_not_valid" />
       </list>
     </recent_temporary>
   </component>
@@ -375,39 +374,46 @@
       <option name="project" value="LOCAL" />
       <updated>1561367312595</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="subject repository test">
+      <created>1561375139605</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1561375139605</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test_test_add_new_subject_not_valid - 2019.06.24 at 13h 10m 20s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_not_valid" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 03m 54s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test_test_add_new_subject_not_valid - 2019.06.24 at 13h 10m 37s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_not_valid" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 04m 57s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test_test_subject_delete_valid - 2019.06.24 at 13h 12m 56s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_valid" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 05m 41s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test_test_subject_delete_valid - 2019.06.24 at 13h 13m 56s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_valid" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 05m 49s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test_test_subject_delete_valid - 2019.06.24 at 13h 14m 49s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_valid" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 06m 09s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test - 2019.06.24 at 13h 15m 10s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 06m 47s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test_test_subject_delete_none_parameter - 2019.06.24 at 13h 15m 50s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_subject_delete_none_parameter" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 06m 56s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test - 2019.06.24 at 13h 15m 59s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 07m 13s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test_test_add_new_subject_parameter_not_valid - 2019.06.24 at 13h 16m 53s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test.test_add_new_subject_parameter_not_valid" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test_test_user_delete_valid - 2019.06.24 at 15h 07m 21s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test.test_user_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_subject_repository_test_Subject_repository_test - 2019.06.24 at 13h 17m 01s.xml">
-      <configuration name="Unittests for subject_repository_test.Subject_repository_test" configurationId="tests" />
+    <history-entry file="Unittests_for_user_repository_test_User_repository_test - 2019.06.24 at 15h 07m 34s.xml">
+      <configuration name="Unittests for user_repository_test.User_repository_test" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -496,7 +502,19 @@
     <MESSAGE value="another changes in program structure" />
     <MESSAGE value="book repository test" />
     <MESSAGE value="chapter repository test" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter repository test" />
+    <MESSAGE value="subject repository test" />
+    <option name="LAST_COMMIT_MESSAGE" value="subject repository test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Repositories/user_repository.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -609,20 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Repositories/user_repository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3.6/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="604" selection-start-line="604" selection-end-line="604" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/book_repository_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -630,30 +634,6 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Repositories/book_repository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="100" column="31" lean-forward="true" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Repositories/chapter_repository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="61" selection-start-line="61" selection-end-line="62" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Repositories/subject_repository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -667,10 +647,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Repositories/chapter_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="61" selection-start-line="61" selection-end-line="62" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="604" selection-start-line="604" selection-end-line="604" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Repositories/book_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="130" column="108" selection-start-line="130" selection-start-column="88" selection-end-line="130" selection-end-column="108" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Repositories/subject_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/subject_repository_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-446">
-          <caret line="18" column="115" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
+        <state relative-caret-position="660">
+          <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Repositories/user_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/user_repository_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="71" column="4" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="75" selection-end-column="42" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
