@@ -8,45 +8,66 @@ class Subject_repository:
     def get_all(self):
         self.cursor.execute("SELECT * from projekt.subject ;")
         records_subject = self.cursor.fetchall()
+        if records_subject == None:
+            return None
         subject_list = []
         for subject in records_subject:
             new_subject = Subject()
             new_subject.id = subject[0]
-            new_subject.chapter_name = subject[1]
-            new_subject.edited_date = subject[3]
+            new_subject.subject = subject[1]
+            new_subject.teacher = subject[2]
+            new_subject.method_of_course_completion = subject[3]
+            new_subject.edited_date = subject[4]
             subject_list.append(new_subject)
         return subject_list
 
     def get_one_by_id(self, id):
+        if id == None or id < 0:
+            return None
         self.cursor.execute("SELECT * from projekt.subject where id=%d ;" % id)
         records_subject = self.cursor.fetchone()
-        now_subject = Subject()
-        now_subject.id = records_subject[0]
-        now_subject.chapter_name = records_subject[1]
-        now_subject.edited_date = records_subject[3]
-        return now_subject
+        if records_subject == None:
+            return None
+        new_subject = Subject()
+        new_subject.id = records_subject[0]
+        new_subject.subject = records_subject[1]
+        new_subject.teacher = records_subject[2]
+        new_subject.method_of_course_completion = records_subject[3]
+        new_subject.edited_date = records_subject[4]
+        return new_subject
 
     def rows_count_subject(self):
-        self.cursor.execute("SELECT count(*) from projekt.subject ;")
+        self.cursor.execute("SELECT max(id) from projekt.subject ;")
         rows_count_subject_1 = self.cursor.fetchall()
         rows_count_subject_2 = rows_count_subject_1[0]
-        return rows_count_subject_2
+        if rows_count_subject_2[0]==None:
+            return 0
+        return rows_count_subject_2[0]
 
     def add_new_subject(self, subject, user_id, attendance_actual, grade):
+        if subject == None or subject.subject == None or subject.teacher == None or subject.method_of_course_completion == None or user_id == None or attendance_actual == None or grade == None:
+            return None
         count = self.rows_count_subject()
-        postgres_insert_query_new_subject = "INSERT INTO projekt.subject (id, subject, teacher, method_of_course_completion, edited_date) VALUES (%d, %s, %s, %s, now())"
-        record_to_insert_new_subject = (count[0] + 1, subject.subject, subject.teacher, subject.method_of_course_completion)
+        postgres_insert_query_new_subject = "INSERT INTO projekt.subject (id, subject, teacher, method_of_course_completion, edited_date) VALUES (%s, %s, %s, %s, now())"
+        record_to_insert_new_subject = (int(count) + 1, subject.subject, subject.teacher, subject.method_of_course_completion)
+        subject.id=int(count) + 1
         self.cursor.execute(postgres_insert_query_new_subject, record_to_insert_new_subject)
         self.connection.commit()
-        self.cursor.execute("SELECT count(*) from projekt.user_subject")
+        self.cursor.execute("SELECT max(id) from projekt.user_subject")
         user_subject_id_count = self.cursor.fetchone()
-        postgres_insert_query_new_subject_in_user_subject = "INSERT INTO projekt.user_subject (id, user_id, subject_id, attendance_actual, grade, edited_date) VALUES (%d, %d, %d, %d, %d, now())"
-        record_to_insert_new_subject_in_user_subject = (user_subject_id_count,user_id, count[0] + 1, attendance_actual, grade )
+        if user_subject_id_count[0]== None:
+            user_subject_id_count=0
+        else:
+            user_subject_id_count=user_subject_id_count[0]
+        postgres_insert_query_new_subject_in_user_subject = "INSERT INTO projekt.user_subject (id, user_id, subject_id, attendance_actual, grade, edited_date) VALUES (%s, %s, %s, %s, %s, now())"
+        record_to_insert_new_subject_in_user_subject = (user_subject_id_count+1, int(user_id), subject.id, int(attendance_actual), int(grade))
         self.cursor.execute(postgres_insert_query_new_subject_in_user_subject, record_to_insert_new_subject_in_user_subject)
         self.connection.commit()
 
     def subject_delete(self, subject_id):
-        postgres_subject_delete_query = "DELETE FROM projekt.subject WHERE subject = %s ;" % subject_id
+        if subject_id==None:
+            return None
+        postgres_subject_delete_query = "DELETE FROM projekt.subject WHERE id = %s ;" % subject_id
         self.cursor.execute(postgres_subject_delete_query)
         postgres_user_subject_delete_query = ("DELETE from projekt.user_subject where subject_id=%d" % subject_id)
         self.cursor.execute(postgres_user_subject_delete_query)

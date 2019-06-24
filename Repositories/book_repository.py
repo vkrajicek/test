@@ -85,15 +85,15 @@ class Book_repository:
         rows_count_book_2 = rows_count_book_1[0]
         if rows_count_book_2[0]==None:
             return 0
-        return rows_count_book_2
+        return rows_count_book_2[0]
 
     def add_new_book(self, book):
         count=self.rows_count_book()
         if book == None or book.id == None or book.user_id == None or book.name_of_the_book == None or book.author == None:
             return None
         postgres_insert_query_new_book = "INSERT INTO projekt.book (id,user_id, name_of_the_book, \"Author\", edited_date) VALUES (%s, %s, %s, %s, now())"
-        record_to_insert_new_book = (int(count[0]) + 1, int(book.user_id), book.name_of_the_book, book.author)
-        book.id=int(count[0]) + 1
+        record_to_insert_new_book = (int(count) + 1, int(book.user_id), book.name_of_the_book, book.author)
+        book.id=int(count) + 1
         self.cursor.execute(postgres_insert_query_new_book, record_to_insert_new_book)
         self.connection.commit()
         chapter_repository = Chapter_repository(self.connection)
@@ -103,10 +103,10 @@ class Book_repository:
                 continue
             chapter_id=chapter_repository.rows_count_chapter()
             postgres_insert_query_new_chapter = "INSERT INTO projekt.chapter (id, chapter_name, edited_date) VALUES (%s, %s, now())"
-            record_to_insert_new_chapter = (int(chapter_id[0]) + 1, i.chapter_name)
+            record_to_insert_new_chapter = (int(chapter_id) + 1, i.chapter_name)
             self.cursor.execute(postgres_insert_query_new_chapter, record_to_insert_new_chapter)
             self.connection.commit()
-            chapter_ids_list.append(int(chapter_id[0]) + 1)
+            chapter_ids_list.append(int(chapter_id) + 1)
         self.cursor.execute("SELECT max(id) from projekt.book_chapter")
         book_chapters_id_count=self.cursor.fetchone()
         book_chaper_id=int(book_chapters_id_count[0])

@@ -23,6 +23,10 @@ class Chapter_repository_test(unittest.TestCase):
         result=self.chapter_repository.get_all()
         self.assertGreater(len(result), 0)
 
+    # def test_get_all_not_valid(self):
+    #     result=self.chapter_repository.get_all()
+    #     self.assertEqual(len(result), 0)
+
     def test_get_one_by_id_valid(self):
         chapters=self.chapter_repository.get_one_by_id(1)
         self.assertEqual(chapters.id, 1)
@@ -42,7 +46,11 @@ class Chapter_repository_test(unittest.TestCase):
 
     def test_rows_count_chapter(self):
         count=self.chapter_repository.rows_count_chapter()
-        self.assertGreater(len(count), 0)
+        self.assertGreater(count, 0)
+
+    # def test_rows_count_chapter_not_valid(self):
+    #     count=self.chapter_repository.rows_count_chapter()
+    #     self.assertEqual(count, 0)
 
     def test_add_new_chapter_valid(self):
         chapter=Chapter()

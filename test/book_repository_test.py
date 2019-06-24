@@ -30,6 +30,10 @@ class Book_repository_test(unittest.TestCase):
         result=self.book_repository.get_all()
         self.assertGreater(len(result), 0)
 
+    # def test_get_all_not_valid(self):
+    #     result=self.book_repository.get_all()
+    #     self.assertEqual(len(result), 0)
+
     def test_get_all_by_user_id_valid(self):
         result = self.book_repository.get_all_by_user_id(1)
         self.assertGreater(len(result), 0)
@@ -64,7 +68,11 @@ class Book_repository_test(unittest.TestCase):
 
     def test_rows_count_book(self):
         count=self.book_repository.rows_count_book()
-        self.assertGreater(len(count), 0)
+        self.assertGreater(count, 0)
+
+    # def test_rows_count_book_not_valid(self):
+    #     count=self.book_repository.rows_count_book()
+    #     self.assertEqual(count, 0)
 
     def test_add_new_book_valid(self):
         book=Book()
