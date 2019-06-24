@@ -84,7 +84,7 @@ class Book_repository:
         rows_count_book_1 = self.cursor.fetchall()
         rows_count_book_2 = rows_count_book_1[0]
         if rows_count_book_2[0]==None:
-            rows_count_book_2[0]=1
+            return 0
         return rows_count_book_2
 
     def add_new_book(self, book):

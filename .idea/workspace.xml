@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1129d594-0ade-4a59-9857-a2cf11504f83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/book_repository_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/chapter_repository_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/chapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/chapter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/book_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/book_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/chapter_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/chapter_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/book_repository_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/book_repository_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/chapter_repository_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/chapter_repository_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/book_repository_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="118" column="54" lean-forward="true" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
+            <state relative-caret-position="-446">
+              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -43,11 +41,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Repositories/book_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="113" column="43" lean-forward="true" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
+            <state relative-caret-position="1245">
+              <caret line="87" column="32" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/chapter_repository_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Repositories/chapter_repository.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="664">
+              <caret line="60" column="22" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -110,14 +129,14 @@
         <option value="$PROJECT_DIR$/Classes/subject.py" />
         <option value="$PROJECT_DIR$/Repositories/text_repository.py" />
         <option value="$PROJECT_DIR$/Classes/book.py" />
-        <option value="$PROJECT_DIR$/Repositories/chapter_repository.py" />
         <option value="$PROJECT_DIR$/Repositories/subject_repository.py" />
         <option value="$PROJECT_DIR$/Repositories/user_repository.py" />
         <option value="$PROJECT_DIR$/projekt.py" />
         <option value="$PROJECT_DIR$/database.sql" />
-        <option value="$PROJECT_DIR$/test/chapter_repository_test.py" />
         <option value="$PROJECT_DIR$/Classes/chapter.py" />
         <option value="$PROJECT_DIR$/Repositories/book_repository.py" />
+        <option value="$PROJECT_DIR$/Repositories/chapter_repository.py" />
+        <option value="$PROJECT_DIR$/test/chapter_repository_test.py" />
         <option value="$PROJECT_DIR$/test/book_repository_test.py" />
       </list>
     </option>
@@ -133,6 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,7 +179,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,7 +219,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_book_parameter_none" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for chapter_repository_test.Chapter_repository_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -210,11 +229,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;book_repository_test.Book_repository_test.test_add_new_book_one_book_parameter_none&quot;" />
+      <option name="_new_target" value="&quot;chapter_repository_test.Chapter_repository_test&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_chapter_parameter_none" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for chapter_repository_test.Chapter_repository_test.test_add_new_chapter_one_parameter_none" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,11 +243,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;book_repository_test.Book_repository_test.test_add_new_book_one_chapter_parameter_none&quot;" />
+      <option name="_new_target" value="&quot;chapter_repository_test.Chapter_repository_test.test_add_new_chapter_one_parameter_none&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for book_repository_test.Book_repository_test.test_book_delete_none_parameter" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_none_parameter" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -238,11 +257,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;book_repository_test.Book_repository_test.test_book_delete_none_parameter&quot;" />
+      <option name="_new_target" value="&quot;chapter_repository_test.Chapter_repository_test.test_chapter_delete_none_parameter&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for book_repository_test.Book_repository_test.test_rows_count_book" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_valid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="databaza_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -252,24 +271,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;book_repository_test.Book_repository_test.test_rows_count_book&quot;" />
+      <option name="_new_target" value="&quot;chapter_repository_test.Chapter_repository_test.test_chapter_delete_valid&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_rows_count_book" />
-      <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_book_parameter_none" />
-      <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_book_delete_none_parameter" />
+      <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test.test_add_new_chapter_one_parameter_none" />
+      <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test" />
+      <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_valid" />
+      <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_none_parameter" />
       <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test" />
-      <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_chapter_parameter_none" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test" />
-        <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_chapter_parameter_none" />
-        <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_book_parameter_none" />
-        <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_rows_count_book" />
-        <item itemvalue="Python tests.Unittests for book_repository_test.Book_repository_test.test_book_delete_none_parameter" />
+        <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test" />
+        <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_none_parameter" />
+        <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_valid" />
+        <item itemvalue="Python tests.Unittests for chapter_repository_test.Chapter_repository_test.test_add_new_chapter_one_parameter_none" />
       </list>
     </recent_temporary>
   </component>
@@ -319,38 +338,45 @@
       <option name="project" value="LOCAL" />
       <updated>1561284577644</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="book repository test">
+      <created>1561360794889</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1561360794889</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test_test_book_delete_valid - 2019.06.24 at 08h 58m 51s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test.test_book_delete_valid" configurationId="tests" />
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test - 2019.06.24 at 10h 59m 39s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test_test_book_delete_none_parameter - 2019.06.24 at 08h 58m 56s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test.test_book_delete_none_parameter" configurationId="tests" />
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test_test_chapter_delete_valid - 2019.06.24 at 11h 00m 13s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_valid" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test_test_book_delete_none_parameter - 2019.06.24 at 08h 59m 05s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test.test_book_delete_none_parameter" configurationId="tests" />
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test - 2019.06.24 at 11h 00m 58s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test_test_rows_count_book - 2019.06.24 at 08h 59m 24s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test.test_rows_count_book" configurationId="tests" />
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test - 2019.06.24 at 11h 01m 22s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test - 2019.06.24 at 09h 00m 14s.xml">
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test_test_chapter_delete_none_parameter - 2019.06.24 at 11h 02m 50s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_none_parameter" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test_test_chapter_delete_none_parameter - 2019.06.24 at 11h 02m 58s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test.test_chapter_delete_none_parameter" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test - 2019.06.24 at 11h 03m 07s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_chapter_repository_test_Chapter_repository_test - 2019.06.24 at 11h 04m 02s.xml">
+      <configuration name="Unittests for chapter_repository_test.Chapter_repository_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_book_repository_test_Book_repository_test - 2019.06.24 at 11h 04m 17s.xml">
       <configuration name="Unittests for book_repository_test.Book_repository_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test_test_add_new_book_one_book_parameter_none - 2019.06.24 at 09h 02m 57s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_book_parameter_none" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test_test_add_new_book_one_chapter_parameter_none - 2019.06.24 at 09h 03m 24s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_chapter_parameter_none" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test_test_add_new_book_one_chapter_parameter_none - 2019.06.24 at 09h 07m 09s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test.test_add_new_book_one_chapter_parameter_none" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test - 2019.06.24 at 09h 07m 21s.xml">
-      <configuration name="Unittests for book_repository_test.Book_repository_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_book_repository_test_Book_repository_test - 2019.06.24 at 09h 08m 18s.xml">
+    <history-entry file="Unittests_for_book_repository_test_Book_repository_test - 2019.06.24 at 11h 04m 38s.xml">
       <configuration name="Unittests for book_repository_test.Book_repository_test" configurationId="tests" />
     </history-entry>
   </component>
@@ -358,17 +384,15 @@
     <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="DB Browser" />
-      <window_info id="Project Explorer" />
-      <window_info id="Job Explorer" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16078018" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Console" />
-      <window_info anchor="bottom" id="DB Execution Console" />
+      <window_info id="Project Explorer" order="3" />
+      <window_info id="DB Browser" order="4" />
+      <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4511526" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34467617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37102085" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -377,6 +401,8 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32930845" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32930845" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32930845" />
+      <window_info anchor="bottom" id="Console" order="11" />
+      <window_info anchor="bottom" id="DB Execution Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -438,7 +464,8 @@
     <MESSAGE value="renamed text&gt;book&#10;added subject, chapter and related functions" />
     <MESSAGE value="added add_new_chapter" />
     <MESSAGE value="another changes in program structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="another changes in program structure" />
+    <MESSAGE value="book repository test" />
+    <option name="LAST_COMMIT_MESSAGE" value="book repository test" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -541,37 +568,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/chapter_repository_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/chapter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Repositories/chapter_repository.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projekt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,10 +589,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projekt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Repositories/book_repository.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="113" column="43" lean-forward="true" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
+        <state relative-caret-position="1245">
+          <caret line="87" column="32" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -601,8 +611,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/book_repository_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="118" column="54" lean-forward="true" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
+        <state relative-caret-position="-446">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Repositories/chapter_repository.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/chapter_repository_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

@@ -27,22 +27,22 @@ class Book_repository_test(unittest.TestCase):
         self.connection.commit()
 
     def test_get_all(self):
-        books=self.book_repository.get_all()
-        self.assertGreater(len(books), 0)
+        result=self.book_repository.get_all()
+        self.assertGreater(len(result), 0)
 
     def test_get_all_by_user_id_valid(self):
-        books = self.book_repository.get_all_by_user_id(1)
-        self.assertGreater(len(books), 0)
+        result = self.book_repository.get_all_by_user_id(1)
+        self.assertGreater(len(result), 0)
 
     def test_get_all_by_user_id_negative(self):
-        books = self.book_repository.get_all_by_user_id(-1)
-        self.assertEqual(books, None)
+        result = self.book_repository.get_all_by_user_id(-1)
+        self.assertEqual(result, None)
 
     def test_get_all_by_user_id_none(self):
-        books = self.book_repository.get_all_by_user_id(None)
-        self.assertEqual(books, None)
+        result = self.book_repository.get_all_by_user_id(None)
+        self.assertEqual(result, None)
 
-    def test_get_one_by_id(self):
+    def test_get_one_by_id_no_chapters(self):
         books=self.book_repository.get_one_by_id(2)
         self.assertEqual(books.name_of_the_book, 'tomas matonoha')
         self.assertEqual(books.author, 'ferdinant')
@@ -59,8 +59,8 @@ class Book_repository_test(unittest.TestCase):
         self.assertEqual(len(books.chapters), 1)
 
     def test_get_one_by_id_negative(self):
-        books=self.book_repository.get_one_by_id(-1)
-        self.assertEqual(books, None)
+        result=self.book_repository.get_one_by_id(-1)
+        self.assertEqual(result, None)
 
     def test_rows_count_book(self):
         count=self.book_repository.rows_count_book()
@@ -87,8 +87,8 @@ class Book_repository_test(unittest.TestCase):
         self.assertEqual(len(result.chapters), len(book.chapters))
 
     def test_add_new_book_none(self):
-        book_test=self.book_repository.add_new_book(None)
-        self.assertEqual(book_test, None)
+        result=self.book_repository.add_new_book(None)
+        self.assertEqual(result, None)
 
     def test_add_new_book_one_book_parameter_none(self):
         book=Book()
