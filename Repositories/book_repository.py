@@ -7,7 +7,7 @@ class Book_repository:
     def __init__(self, connection):
         self.connection = connection
         self.cursor = connection.cursor()
-
+    # get all data from book table
     def get_all(self):
         self.cursor.execute("SELECT * from projekt.book ;")
         records_book = self.cursor.fetchall()
@@ -24,7 +24,7 @@ class Book_repository:
             return book_list
         else:
             return None
-
+    # get all data from bok table accoring to user_id
     def get_all_by_user_id(self, user_id):
         if user_id == None:
             return None
@@ -42,7 +42,7 @@ class Book_repository:
             now_book.edited_date = book[4]
             book_list.append(now_book)
         return book_list
-
+    # getcone row of data from book table according to id
     def get_one_by_id(self, id):
         self.cursor.execute("SELECT * from projekt.book where id=%d ;" % id)
         records_book = self.cursor.fetchone()
@@ -78,7 +78,7 @@ class Book_repository:
                 return new_book
         else:
             return None
-
+    # find the biggest id from book table for latter use
     def rows_count_book(self):
         self.cursor.execute("SELECT max(id) from projekt.book ;")
         rows_count_book_1 = self.cursor.fetchall()
@@ -86,15 +86,15 @@ class Book_repository:
         if rows_count_book_2[0]==None:
             return 0
         return rows_count_book_2[0]
-
+    # added new book into book, chapter and book_chapter tables
     def add_new_book(self, book):
         count=self.rows_count_book()
         if book == None or book.id == None or book.user_id == None or book.name_of_the_book == None or book.author == None:
             return None
-        postgres_insert_query_new_book = "INSERT INTO projekt.book (id,user_id, name_of_the_book, \"Author\", edited_date) VALUES (%s, %s, %s, %s, now())"
+        insert_query_new_book = "INSERT INTO projekt.book (id,user_id, name_of_the_book, \"Author\", edited_date) VALUES (%s, %s, %s, %s, now())"
         record_to_insert_new_book = (int(count) + 1, int(book.user_id), book.name_of_the_book, book.author)
         book.id=int(count) + 1
-        self.cursor.execute(postgres_insert_query_new_book, record_to_insert_new_book)
+        self.cursor.execute(insert_query_new_book, record_to_insert_new_book)
         self.connection.commit()
         chapter_repository = Chapter_repository(self.connection)
         chapter_ids_list=[]
@@ -117,7 +117,7 @@ class Book_repository:
             self.cursor.execute(postgres_insert_query_new_book_and_chapters, record_to_insert_new_book_and_chapters)
             self.connection.commit()
         return book
-
+    # deleted one book from book_chapter, chapter and book tables
     def book_delete(self, book_id):
         if book_id==None:
             return None

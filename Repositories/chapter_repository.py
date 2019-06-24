@@ -6,6 +6,7 @@ class Chapter_repository:
         self.connection = connection
         self.cursor = connection.cursor()
 
+    # all data are selected from chapter table
     def get_all(self):
         self.cursor.execute("SELECT * from projekt.chapter ;")
         records_chapter = self.cursor.fetchall()
@@ -20,7 +21,7 @@ class Chapter_repository:
             return chapter_list
         else:
             return None
-
+    # one row of data is selected from chapter table
     def get_one_by_id(self, id):
         if id == None or id < 0:
             return None
@@ -33,7 +34,7 @@ class Chapter_repository:
         now_chapter.chapter_name = records_chapter[1]
         now_chapter.edited_date = records_chapter[2]
         return now_chapter
-
+    # find the biggest id from chapter table for latter use
     def rows_count_chapter(self):
         self.cursor.execute("SELECT max(id) from projekt.chapter ;")
         rows_count_chapter_1 = self.cursor.fetchall()
@@ -41,7 +42,7 @@ class Chapter_repository:
         if rows_count_chapter_2[0]==None:
             return 0
         return rows_count_chapter_2[0]
-
+    # added new chapter into chapter table and book+chapter table
     def add_new_chapter(self, chapter, book_id):
         count = self.rows_count_chapter()
         if chapter == None or chapter.chapter_name == None or chapter.id == None or book_id == None:
@@ -57,7 +58,7 @@ class Chapter_repository:
         record_to_insert_new_chapter_in_book_chapter = (book_chaper_id + 1, int(book_id), int(count) + 1)
         self.cursor.execute(postgres_insert_query_new_chapter_in_book_chapter, record_to_insert_new_chapter_in_book_chapter)
         self.connection.commit()
-
+    # deleted one chapter from chapter table and book_chapter table
     def chapter_delete(self, chapter_id):
         if chapter_id==None:
             return None

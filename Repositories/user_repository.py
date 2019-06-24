@@ -5,7 +5,7 @@ class User_repository:
     def __init__(self, connection):
         self.connection = connection
         self.cursor = connection.cursor()
-
+    # get all data from user table
     def get_all(self):
         self.cursor.execute("SELECT * from projekt.user ;")
         records_user = self.cursor.fetchall()
@@ -23,7 +23,7 @@ class User_repository:
             new_user.lastlogintime = user[6]
             user_list.append(new_user)
         return user_list
-
+    # ged one row of data from user table according to id
     def get_one_by_id(self, id):
         if id == None or id < 0:
             return None
@@ -40,7 +40,7 @@ class User_repository:
         new_user.lastlogin = records_user[5]
         new_user.lastlogintime = records_user[6]
         return new_user
-
+    #update one row of data in user table
     def update(self, user):
         if user.id == None or user == None or user.name == None or user.surename == None or user.login == None or user.password == None:
             return None
@@ -48,7 +48,7 @@ class User_repository:
         parameters = (user.name, user.surename, user.login, user.password, int(user.id))
         self.cursor.execute(user_update_query, parameters)
 
-
+    # selected user according to login and password
     def user_select(self, login_result, pass_result):
         if login_result == None or pass_result == None:
             return None
@@ -68,7 +68,7 @@ class User_repository:
             return new_user
         else:
             return None
-
+    # add new user into user table
     def add_new_user(self, user):
         if user.id == None or user == None or user.name == None or user.surename == None or user.login == None or user.password == None:
             return None
@@ -76,7 +76,7 @@ class User_repository:
         record_to_add = (int(user.id), user.name, user.surename, user.login, user.password)
         self.cursor.execute(postgres_add_query, record_to_add)
         self.connection.commit()
-
+    # delete one user from user, user_subject and subject tables
     def user_delete(self, user_id):
         if user_id==None:
             return None
