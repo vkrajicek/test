@@ -5,7 +5,7 @@ class Book:
         self.name_of_the_book = ''
         self.author = ''
         self.edited_date = ''
-        self.chapters=[]
+        self.chapters = []
 
     def __str__(self):
         return str(self.id) + ' ' + str(
